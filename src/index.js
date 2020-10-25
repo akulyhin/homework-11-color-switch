@@ -17,10 +17,11 @@ const colors = [
 
 let changeThemeColor = false;
 
+const randomIntegerFromInterval = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
 const changeTheme = () => {
-    const randomIntegerFromInterval = (min, max) => {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-      };
       refs.body.style.background = colors[randomIntegerFromInterval(0, colors.length - 1)];
   };
 
@@ -42,3 +43,12 @@ refs.stop.addEventListener('click', () => {
     stopChangeColor();
     refs.body.style.background = 'url(images/bg-pattern.png)';
 })
+
+
+// function whatDayIsToday () => {
+//     const date = new Date();
+//     return date;
+// }
+
+
+
